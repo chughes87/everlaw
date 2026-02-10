@@ -151,9 +151,6 @@ This runs:
 ### Auto-fixing Issues
 
 ```bash
-# Fix linting issues automatically
-npm run lint:fix
-
 # Format all files
 npm run format
 ```
