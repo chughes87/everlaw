@@ -1,0 +1,6 @@
+This is a sample text file for testing the CLI.
+
+It contains multiple lines.
+You can use this to test the file reader functionality.
+
+Happy coding!
