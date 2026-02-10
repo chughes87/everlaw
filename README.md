@@ -92,20 +92,28 @@ npm run test:coverage
 - ✅ Test coverage reporting
 - ✅ Source maps for debugging
 - ✅ Development mode with ts-node (no build required)
+- ✅ **ESLint** for code quality and bug detection
+- ✅ **Prettier** for consistent code formatting
+- ✅ **VS Code integration** with settings and debug configurations
+- ✅ **EditorConfig** for cross-editor consistency
+- ✅ **Comprehensive validation** script to check everything before committing
 
 ## Development
 
 The project uses:
+
 - **TypeScript** for type-safe code
 - **ts-jest** for running TypeScript tests
 - **ts-node** for running TypeScript directly in development
 - **nodemon** for watching file changes
 
 When you run `npm run test:watch`, nodemon will:
+
 - Watch for changes in `src/` and `test/` directories
 - Automatically re-run all tests when any `.ts` file changes
 
 **Alternative: Use Jest's built-in watch mode**
+
 ```bash
 npx jest --watch
 ```
@@ -119,13 +127,46 @@ npx jest --watch
 - `npm test` - Run tests once
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
+- `npm run lint` - Check code quality with ESLint
+- `npm run lint:fix` - Auto-fix ESLint issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check if code is formatted
+- `npm run typecheck` - Type-check without building
+- `npm run validate` - Run all checks (typecheck, lint, format, test)
 - `npm run clean` - Remove compiled files
 
-## Next Steps
+## Code Quality
 
-This boilerplate provides a solid foundation. You can extend it by:
-- Adding more complex file processing logic
-- Supporting different file formats
-- Adding command-line options (using a library like `commander` or `yargs`)
-- Implementing additional CLI features based on interview requirements
-- Adding ESLint and Prettier for code quality
+### Before Committing
+
+Always run the validation script to ensure everything passes:
+
+```bash
+npm run validate
+```
+
+This runs:
+
+1. TypeScript type checking
+2. ESLint code quality checks
+3. Prettier formatting checks
+4. All unit tests
+
+### Auto-fixing Issues
+
+```bash
+# Fix linting issues automatically
+npm run lint:fix
+
+# Format all files
+npm run format
+```
+
+### Manual Debugging
+
+```bash
+node --inspect-brk -r ts-node/register src/cli.ts sample.txt
+```
+
+Then open `chrome://inspect` in Chrome.
+
