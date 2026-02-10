@@ -92,7 +92,6 @@ npm run test:coverage
 - ✅ Test coverage reporting
 - ✅ Source maps for debugging
 - ✅ Development mode with ts-node (no build required)
-- ✅ **ESLint** for code quality and bug detection
 - ✅ **Prettier** for consistent code formatting
 - ✅ **VS Code integration** with settings and debug configurations
 - ✅ **EditorConfig** for cross-editor consistency
@@ -127,8 +126,6 @@ npx jest --watch
 - `npm test` - Run tests once
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
-- `npm run lint` - Check code quality with ESLint
-- `npm run lint:fix` - Auto-fix ESLint issues
 - `npm run format` - Format code with Prettier
 - `npm run format:check` - Check if code is formatted
 - `npm run typecheck` - Type-check without building
@@ -148,9 +145,8 @@ npm run validate
 This runs:
 
 1. TypeScript type checking
-2. ESLint code quality checks
-3. Prettier formatting checks
-4. All unit tests
+2. Prettier formatting checks
+3. All unit tests
 
 ### Auto-fixing Issues
 
